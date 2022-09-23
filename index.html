@@ -24,6 +24,16 @@
             color:black
         }
 
+        .roll {
+            background-color: #34ecac;
+            color: black;
+        }
+
+        .roll:hover {
+            background-color: #2596be;
+            color: black;
+        }
+
         h5 {
             color:black
         }
@@ -34,6 +44,11 @@
 
         #starframe {
             background-color: #34ecac;
+            color: black;
+        }
+
+        #starframe:hover {
+            background-color: #2596be;
         }
 
         .result {
@@ -51,7 +66,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button type="button" onclick="rollDrive()" style="float:right;">Rip It!</button>
+                    <button type="button" class="btn btn-primary btn-lg roll" onclick="rollDrive()" style="float:right;">Rip It!</button>
                 </div>
                 <div class="col">
                     <h3 class="description" style="text-align:center;">Throw: </h3>
@@ -68,7 +83,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button type="button" onclick="rollPutt()" style="float:right;">Putt</button>
+                    <button type="button" class="btn btn-primary btn-lg roll"onclick="rollPutt()" style="float:right;">Putt</button>
                 </div>
                 <div class="col">
                     <h3 class="description" style="text-align:center;">Putt: </h3>
@@ -122,7 +137,7 @@ function playMusic(){
             <li class="list-inline-item">
             </li>
             <li class="list-inline-item">
-                <button type="button" id="starframe" onclick="playMusic()">Starframe</button>
+                <button type="button" class="btn btn-primary btn-lg" id="starframe" onclick="playMusic()">Starframe</button>
             </li>
             <li class="list-inline-item">
             </li>
