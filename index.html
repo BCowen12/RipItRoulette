@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    </header>
+<body>
+    <style>
+
+        #links {
+            position: fixed;
+            left: 50%;
+        }
+
+        .col {
+            margin: 5px;
+            padding-top: 15px;
+        }
+
+        .result {
+            outline: solid;
+            outline-color: black;
+        }
+
+        .red {
+          background-color: darkred;
+          color: white;
+        }
+        
+        .green {
+          background-color: green;
+          color: white;
+        }
+
+        .redC {
+          color: darkred;
+        }
+        
+        .greenC {
+          color: green;
+        }
+        </style>
+
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <h1>Rules:</h1>
+        <p>Hit the "Rip It!" button at the tee box to see how everyone will throw their first throw. After all drives have been thrown, hit the "Rip It!" button again to see how everyone throws their second throw and repeat this until you are inside Circle 2 (60'). Once in Circle 2, hit the "Putt" button to see how everyone throws their first putt. Click "Putt" again for second putts and so on.</p>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="rollDrive()" style="float:right;">Rip It!</button>
+                </div>
+                <div class="col">
+                    <h3 class="description" style="text-align:center;">Throw: </h3>
+                </div>
+                <div class="col result">
+                    <h5 id="throw" style="text-align:center;"></h5>
+                </div>
+                <div class="col">
+                    <h3 class="description" style="text-align:center;">Disc: </h3>
+                </div>
+                <div class="col result">
+                    <h5 id="disc" style="text-align:center;"></h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="rollPutt()" style="float:right;">Putt</button>
+                </div>
+                <div class="col">
+                    <h3 class="description" style="text-align:center;">Putt: </h3>
+                </div>
+                <div class="col result">
+                    <h5 id="putt" style="text-align:center;"></h5>
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+            </div>
+          </div>
+
+
+<p id="putt" style="float:center;"></p>
+
+<button type="button" onclick="playMusic()">Starframe</button>
+
+
+<script>
+function rollDrive() {
+    const throws = ["Your Choice", "Forehand", "Backhand", "Roller", "Skip"];
+    const discs = ["Your Choice", "Driver", "Midrange", "Putter", "Overstable", "Understable"];
+    let throwChoice = Math.floor(Math.random() * throws.length); 
+    let discChoice = Math.floor(Math.random() * discs.length); 
+    document.getElementById("disc").innerHTML = discs[discChoice];
+    document.getElementById("throw").innerHTML = throws[throwChoice];
+}
+
+function rollPutt() {
+    const putter = ["Your Choice", "Forehand", "Backhand", "Straddle", "Turbo"];
+    let putterChoice = Math.floor(Math.random() * putter.length); 
+    document.getElementById("putt").innerHTML = putter[putterChoice];
+}
+
+function playMusic(){
+    var music = new Audio('Starframe.mp3');
+    music.play();
+}
+
+</script>
+
+</body>
+</html>
