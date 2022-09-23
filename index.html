@@ -2,41 +2,41 @@
 <html>
     <header>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+        <link href="css/agency.min.css" rel="stylesheet">
     </header>
 <body>
     <style>
+        body{
+            background-color: white;
+        }
 
-        #links {
-            position: fixed;
-            left: 50%;
+        p {
+            color:black
         }
 
         .col {
             margin: 5px;
             padding-top: 15px;
         }
+        h1 {
+            color:black
+        }
+
+        h5 {
+            color:black
+        }
+
+        h3 {
+            color:black
+        }
+
+        #starframe {
+            background-color: #34ecac;
+        }
 
         .result {
             outline: solid;
             outline-color: black;
-        }
-
-        .red {
-          background-color: darkred;
-          color: white;
-        }
-        
-        .green {
-          background-color: green;
-          color: white;
-        }
-
-        .redC {
-          color: darkred;
-        }
-        
-        .greenC {
-          color: green;
         }
         </style>
 
@@ -84,7 +84,6 @@
 
 <p id="putt" style="float:center;"></p>
 
-<button type="button" onclick="playMusic()">Starframe</button>
 
 
 <script>
@@ -109,6 +108,29 @@ function playMusic(){
 }
 
 </script>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+            </li>
+            <li class="list-inline-item">
+                <button type="button" id="starframe" onclick="playMusic()">Starframe</button>
+            </li>
+            <li class="list-inline-item">
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
