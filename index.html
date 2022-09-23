@@ -27,6 +27,8 @@
         .roll {
             background-color: #34ecac;
             color: black;
+            justify-content: left;
+            text-align: center;
         }
 
         .roll:hover {
@@ -34,11 +36,12 @@
             color: black;
         }
 
-        h5 {
-            color:black
+        h6 {
+            color:black;
+            padding-top: 10px;
         }
 
-        h3 {
+        h4 {
             color:black
         }
 
@@ -55,6 +58,7 @@
             outline: solid;
             outline-color: black;
         }
+
         </style>
 
         <div class="container">
@@ -69,16 +73,22 @@
                     <button type="button" class="btn btn-primary btn-lg roll" onclick="rollDrive()" style="float:right;">Rip It!</button>
                 </div>
                 <div class="col">
-                    <h3 class="description" style="text-align:center;">Throw: </h3>
-                </div>
-                <div class="col result">
-                    <h5 id="throw" style="text-align:center;"></h5>
                 </div>
                 <div class="col">
-                    <h3 class="description" style="text-align:center;">Disc: </h3>
                 </div>
-                <div class="col result">
-                    <h5 id="disc" style="text-align:center;"></h5>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <h4 class="description" style="text-align:center;">Throw: </h4>
+                </div>
+                <div class="col-3 result">
+                    <h6 id="throw" style="text-align:center;"></h6>
+                </div>
+                <div class="col-3">
+                    <h4 class="description" style="text-align:center;">Disc: </h4>
+                </div>
+                <div class="col-3 result">
+                    <h6 id="disc" style="text-align:center;"></h6>
                 </div>
             </div>
             <div class="row">
@@ -86,14 +96,20 @@
                     <button type="button" class="btn btn-primary btn-lg roll"onclick="rollPutt()" style="float:right;">Putt</button>
                 </div>
                 <div class="col">
-                    <h3 class="description" style="text-align:center;">Putt: </h3>
-                </div>
-                <div class="col result">
-                    <h5 id="putt" style="text-align:center;"></h5>
                 </div>
                 <div class="col">
                 </div>
-                <div class="col">
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <h4 class="description" style="text-align:center;">Putt: </h4>
+                </div>
+                <div class="col-3 result">
+                    <h6 id="putt" style="text-align:center;"></h6>
+                </div>
+                <div class="col-3">
+                </div>
+                <div class="col-3">
                 </div>
             </div>
           </div>
