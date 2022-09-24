@@ -30,9 +30,11 @@
             text-align: left;
         }
 
-        h6 {
+        .turn {
             color:black;
             padding-top: 10px;
+            padding: 0%;
+            margin-bottom: 0%;
         }
 
         h5 {
@@ -47,6 +49,7 @@
         .result {
             outline: solid;
             outline-color: black;
+            padding: 0%;
         }
 
         </style>
@@ -72,13 +75,13 @@
                     <h5 class="description" style="text-align:center;">Throw:</h5>
                 </div>
                 <div class="col-3 result">
-                    <h6 id="throw" style="text-align:center;"></h6>
+                    <p class="turn" id="throw" style="text-align:center;"></p>
                 </div>
                 <div class="col-2">
                     <h5 class="description" style="text-align:center;">Disc:</h5>
                 </div>
                 <div class="col-3 result">
-                    <h6 id="disc" style="text-align:center;"></h6>
+                    <p class="turn" id="disc" style="text-align:center;"></p>
                 </div>
                 <div class="col-1">
                 </div>
@@ -97,7 +100,7 @@
                     <h5 class="description" style="text-align:center;">Putt: </h5>
                 </div>
                 <div class="col-3 result">
-                    <h6 id="putt" style="text-align:center;"></h6>
+                    <p class="turn" id="putt" style="text-align:center;"></p>
                 </div>
                 <div class="col-3">
                 </div>
@@ -113,8 +116,8 @@
 
 <script>
 function rollDrive() {
-    const throws = ["Your Choice", "Forehand", "Backhand", "Roller", "Skip"];
-    const discs = ["Your Choice", "Driver", "Midrange", "Putter", "Overstable", "Understable"];
+    const throws = ["You Pick", "Forehand", "Backhand", "Roller", "Skip It", "Hyzer", "Anhyzer", "Standstill", "Tomahawk", "Thumber", "360 Turn", ];
+    const discs = ["You Pick", "Driver", "Midrange", "Putter", "Overstable", "Understable", "Oldest Disc", "Newest Disc"];
     let throwChoice = Math.floor(Math.random() * throws.length); 
     let discChoice = Math.floor(Math.random() * discs.length); 
     document.getElementById("disc").innerHTML = discs[discChoice];
@@ -122,7 +125,7 @@ function rollDrive() {
 }
 
 function rollPutt() {
-    const putter = ["Your Choice", "Forehand", "Backhand", "Straddle", "Turbo"];
+    const putter = ["You Pick", "Forehand", "Backhand", "Straddle", "Turbo", "From a Knee", "Other Hand", "Eyes Closed"];
     let putterChoice = Math.floor(Math.random() * putter.length); 
     document.getElementById("putt").innerHTML = putter[putterChoice];
 }
@@ -145,7 +148,9 @@ function playMusic(){
             <li class="list-inline-item">
             </li>
             <li class="list-inline-item">
-                <button type="button" class="btn btn-primary btn-lg" id="starframe" onclick="playMusic()">Starframe</button>
+                <button type="button" class="btn btn-primary btn-lg" id="starframe" onclick="playMusic()">
+                    Starframe
+                </button>
             </li>
             <li class="list-inline-item">
             </li>
